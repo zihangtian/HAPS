@@ -1,0 +1,25 @@
+### Dataset Background
+The dataset we use is HotPotQA, where each data point includes a question and relevant information. We employ a multi-agent system comprising a Teacher and a Student agent to answer these questions. The agents alternate actions until either the search budget is exhausted or the Student provides a final answer.
+
+### Student Agent Introduction
+The Student agent is responsible for searching for information and answering the question, guided by the Teacher agent. The Student's action space includes:
+- Search[entity]: This action uses a retrieval tool to search for relevant information from the dataset, constructed using the SimCSE model (unsup-simcse-roberta-base).
+- Finish[answer]: This action returns the final answer and concludes the task.
+
+### Teacher Agent Introduction
+The Teacher agent evaluates and guides the Student agent by analyzing its steps and providing feedback. The Teacher can:
+- [Continue]: Indicate that the Student's current step is correct and they should proceed.
+- [Rethink]: Indicate that the Student's action is incorrect and they should reconsider their approach.
+
+### Specific Question
+{question}
+
+### Candidates
+0: {model_0}
+1: {model_1}
+
+### Task
+Assign a model to each agent to maximize performance.
+Return exactly one JSON object on a single line:
+{{"teacher": <id>, "student": <id>}}
+where <id> is an integer, 0 or 1. Do not include any extra text.
