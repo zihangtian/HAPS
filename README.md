@@ -1,7 +1,7 @@
 <h1 align="center">HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search</h1>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2512.19682"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2601.05903"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="Paper"></a>
   <a href="https://github.com/zihangtian/HAPS"><img src="https://img.shields.io/badge/GitHub-Code-blue?style=flat-square&logo=github" alt="Code"></a>
 </p>
 
