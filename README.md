@@ -1,6 +1,26 @@
-# HAPS
+<h1 align="center">HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search</h1>
 
-Source code for the paper **"HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search"**.
+<p align="center">
+  <a href="https://arxiv.org/abs/2512.19682"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="Paper"></a>
+  <a href="https://github.com/zihangtian/HAPS"><img src="https://img.shields.io/badge/GitHub-Code-blue?style=flat-square&logo=github" alt="Code"></a>
+</p>
+
+---
+
+## 📌 Introduction
+
+**HAPS** (Hierarchical LLM Routing with Joint Architecture and Parameter Search) introduces a novel approach to routing large language models (LLMs). Traditional methods typically focus on **discrete model architecture selection**, but they often overlook the impact of *model parameter configurations* on performance.
+
+HAPS proposes a **hierarchical routing framework** where:
+
+* The upper-level router selects the best architecture from a set of candidate models (discrete decision),
+* The lower-level router optimizes the model's parameters (continuous space),
+* Both levels share information through a parameter generation network, enhancing both architecture selection and parameter tuning.
+
+This method effectively combines **discrete architecture search** and **continuous parameter optimization**, allowing the system to select the best model for a task and optimize its parameters for improved performance. The approach has been tested on benchmark tasks, demonstrating superior results compared to existing methods.
+
+In summary, **HAPS bridges the gap between discrete architecture search and continuous parameter optimization to create a more intelligent LLM routing solution**.
+
 
 ## 🛠️ Environment Setup
 
@@ -141,3 +161,16 @@ python rl_batch.py \
 ```
 
 > **Note:** The script automatically evaluates the model on the validation set during training. If a better validation score is achieved, it will automatically trigger an evaluation on the test set.
+
+## 📖 Citation
+
+If you find HAPS useful for your research, please consider citing:
+
+```bibtex
+@article{tian2026haps,
+  title={HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search},
+  author={Tian, Zihang and Li, Rui and Zhang, Jingsen and Bo, Xiaohe and Huo, Wei and Chen, Xu},
+  journal={arXiv preprint arXiv:2601.05903},
+  year={2026}
+}
+```
